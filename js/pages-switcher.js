@@ -1,10 +1,3 @@
-/*
-* Template Name: Unique - Responsive vCard Template
-* Author: lmpixels
-* Author URL: http://themeforest.net/user/lmpixels
-* Version: 1.0
-*/
-
 var PageTransitions = (function ($, options) {
 "use strict";
     var defaultStartPage = "home",
@@ -57,6 +50,7 @@ var PageTransitions = (function ($, options) {
         });
 
         window.onhashchange = function(event) {
+            
             if(location.hash) {
                 if (isAnimating) {
                     return false;
@@ -135,7 +129,7 @@ var PageTransitions = (function ($, options) {
         });
 
         $(document)
-            .on("click",".site-main-menu, #ajax-page-close-button", function (e) { // Hide Ajax Loaded Page on Navigation cleck and Close button
+            .on("click",".site-main-menu, #ajax-page-close-button", function (e) { // Hide Ajax Loaded Page on Navigation click and Close button
                 e.preventDefault();
                 hideContent();
                 location.hash = location.hash.split('/')[0];

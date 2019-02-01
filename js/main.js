@@ -1,10 +1,3 @@
-/*
-* Template Name: Unique - Responsive vCard Template
-* Author: lmpixels
-* Author URL: http://themeforest.net/user/lmpixels
-* Version: 1.0
-*/
-
 (function($) {
 "use strict";
     
@@ -100,7 +93,7 @@
 
     //On Window load & Resize
     $(window)
-        .on('load', function() { //Load
+        .on('load', function(e) { //Load
             // Animation on Page Loading
             $(".preloader").fadeOut("slow");
 
@@ -111,7 +104,6 @@
                     menu: 'ul.site-main-menu',
                 });
             }
-
             customScroll();
         })
         .on('resize', function() { //Resize
@@ -253,7 +245,7 @@
         $('.tilt-effect').tilt({
 
         });
-
+		$( "div" ).last().empty();
     });
 
 })(jQuery);
